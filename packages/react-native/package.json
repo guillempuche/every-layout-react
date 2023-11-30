@@ -1,0 +1,13 @@
+{
+  "name": "@every-layout/react-native",
+  "version": "0.0.1",
+  "main": "src/index",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">= 0.64.0"
+  },
+  "devDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}

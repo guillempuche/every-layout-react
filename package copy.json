@@ -49,6 +49,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "jest-react-native": "18.0.0",
     "jsdom": "~22.1.0",
+    "jsonc-eslint-parser": "^2.4.0",
     "metro": "0.76.8",
     "metro-babel-register": "0.76.8",
     "metro-config": "0.76.8",

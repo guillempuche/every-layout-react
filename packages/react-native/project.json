@@ -1,0 +1,55 @@
+{
+  "name": "react-native",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-native/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/react-native",
+        "tsConfig": "packages/react-native/tsconfig.lib.json",
+        "project": "packages/react-native/package.json",
+        "entryFile": "packages/react-native/src/index.ts",
+        "external": [
+          "react/jsx-runtime",
+          "react-native",
+          "react",
+          "react-dom"
+        ],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "packages/react-native/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "packages/react-native/**/*.{ts,tsx,js,jsx}",
+          "packages/react-native/package.json"
+        ]
+      }
+    },
+    "npm-publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "../../../scripts/npm-safe-publish.sh \"@devcycle/react-native-client-sdk\"",
+        "cwd": "dist/sdk/react-native",
+        "forwardAllArgs": true
+      }
+    }
+  }
+}
