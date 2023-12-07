@@ -8,6 +8,12 @@ tmp
 # dependencies
 node_modules
 
+# ReScript
+.bsb.lock
+**/lib/bs
+**/lib/ocaml
+**/.merlin
+
 # IDEs and editors
 /.idea
 .project
@@ -117,4 +123,3 @@ yarn-error.log
 
 # testing
 /coverage
-

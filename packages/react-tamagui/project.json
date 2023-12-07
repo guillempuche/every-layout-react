@@ -1,0 +1,70 @@
+{
+  "name": "react-tamagui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-tamagui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "res:dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "yarn rescript build -w",
+        "cwd": "packages/react-tamagui"
+      }
+    },
+    "res:build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "yarn rescript",
+        "cwd": "packages/react-tamagui"
+      }
+    },
+    "res:build2": {
+      "executor": "nx:run-commands",
+      "inputs": [
+        "{projectRoot}/src/index.ts",
+        "{projectRoot}/src/**.res"
+      ],
+      "outputs": [
+        "{projectRoot}/src/index.ts",
+        "{projectRoot}/src/**.bs.js",
+        "{projectRoot}/src/**.gen.ts"
+      ],
+      "options": {
+        "commands": [
+          "yarn rescript build"
+        ],
+        "cwd": "packages/react-tamagui"
+      }
+    },
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/react-tamagui"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "packages/react-tamagui/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

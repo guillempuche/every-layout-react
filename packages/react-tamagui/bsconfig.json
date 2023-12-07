@@ -1,0 +1,33 @@
+{
+  "name": "react-tamagui",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "bs-dependencies": [
+    "@rescript/react"
+  ],
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
+  "namespace": true,
+  "jsx": {
+    "version": 4,
+    "mode": "automatic"
+  },
+  "suffix": ".bs.js",
+  "gentypeconfig": {
+    "shims": {},
+    "generatedFileExtension": ".gen.ts",
+    "module": "es6",
+    "debug": {
+      "all": false,
+      "basic": false
+    }
+  }
+}

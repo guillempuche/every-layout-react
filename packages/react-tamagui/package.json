@@ -1,0 +1,16 @@
+{
+  "name": "react-tamagui",
+  "version": "0.0.1",
+  "main": "./src/index.js",
+  "types": "./index.d.ts",
+  "dependencies": {
+    "rescript": "*"
+  },
+  "devDependencies": {
+    "@rescript/react": "*",
+    "@tamagui/core": "*"
+  },
+  "peerDependencies": {
+    "@tamagui/core": ">= 1.75.0"
+  }
+}
