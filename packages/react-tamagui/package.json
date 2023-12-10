@@ -3,14 +3,38 @@
   "version": "0.0.1",
   "main": "./src/index.js",
   "types": "./index.d.ts",
-  "dependencies": {
-    "rescript": "*"
+  "publishConfig": {
+    "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillempuche/every-layout-react.git",
+    "directory": "packages/react-tamagui"
+  },
+  "bugs": {
+    "url": "https://github.com/guillempuche/every-layout-react/issues"
+  },
+  "keywords": [
+    "every layout",
+    "fluid design",
+    "responsive",
+    "react",
+    "react native",
+    "tamagui",
+    "expo",
+    "ui",
+    "rescript",
+    "typescript"
+  ],
+  "dependencies": {},
   "devDependencies": {
     "@rescript/react": "*",
-    "@tamagui/core": "*"
+    "@tamagui/core": "*",
+    "tamagui": "*",
+    "rescript": "*"
   },
   "peerDependencies": {
-    "@tamagui/core": ">= 1.75.0"
+    "@tamagui/core": ">= 1.75.0",
+    "react-native": ">= 0.68.0"
   }
 }

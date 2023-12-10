@@ -39,6 +39,10 @@
     },
     "build": {
       "executor": "@nx/vite:build",
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps"
+      ],
       "outputs": [
         "{options.outputPath}"
       ],

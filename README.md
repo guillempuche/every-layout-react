@@ -4,18 +4,19 @@ This repository implements the principles of [Every Layout](https://every-layout
 
 ## Components
 
-1. **Stack:** Manages vertical spacing between its child elements.
-2. **Box:** Provides padding and border control for its content.
-3. **Center:** Aligns its child both horizontally and vertically in its parent.
-4. **Cluster:** Arranges items with a consistent space between them.
-5. **Sidebar:** Creates a main content area with a sidebar.
-6. **Cover:** Allows for a full-viewport-height presentation with header and footer.
-7. **Frame:** Places an item in the center with an optional border.
-8. **Reel:** For horizontally scrolling lists of items.
-9. **Imposter:** Breaks an element out of its container to cover another.
-10. **Icon:** An inline element for inserting icons with optional text.
+- **Box:** Provides padding and border control for its content.
+- **Center:** Aligns its child both horizontally and vertically in its parent.
+- **Cluster:** Arranges items with a consistent space between them.
+- **Cover:** Allows for a full-viewport-height presentation with header and footer.
+- **Frame:** Places an item in the center with an optional border.
+- **Icon:** An inline element for inserting icons with optional text.
+- **Imposter:** Breaks an element out of its container to cover another.
+- **Reel:** For horizontally scrolling lists of items.
+- **Sidebar:** Creates a main content area with a sidebar.
+- **Stack:** Manages vertical spacing between its child elements.
+- **Switcher:** Switches between a horizontal and vertical layout depending on the available space.
 
-The Switcher and Grid aren't implemented.
+The Grid isn't implemented because can be built with Tamagui components.
 
 ## Usage
 
@@ -24,3 +25,10 @@ Each component is designed with simplicity and flexibility in mind, making it ea
 This repo aims to provide developers with a toolkit for creating responsive, consistent layouts with ease, following the Every Layout philosophy.
 
 Feel free to explore, contribute, and raise issues or suggestions to improve these components! 🚀🎨
+
+## Contribute
+
+Requirements:
+
+- Install [Yarn](https://yarnpkg.com/getting-started/install) package manager. Then install all the packages with `yarn add`.
+- To make commits, we use run `yarn run commit`. To do so, install `npm install -g commitizen` to so.

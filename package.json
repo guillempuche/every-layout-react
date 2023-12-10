@@ -2,11 +2,26 @@
   "name": "every-layout",
   "version": "0.0.0",
   "license": "MIT",
+  "scripts": {
+    "commit": "yarn run prepare && czg",
+    "check-commit": "node ./scripts/commit-lint.js",
+    "prepare": "husky install",
+    "lint": "nx run-many --target=lint",
+    "release": "node scripts/release.js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "czConfig": "./scripts/commit-lint.js"
+    }
+  },
+  "packageManager": "yarn@4.0.2",
+  "engines": {
+    "node": ">= 18.0.0"
+  },
   "dependencies": {
-    "@tamagui/core": "1.79.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-is": "18.2.0",
     "react-native": "0.72.6"
   },
   "devDependencies": {
@@ -29,6 +44,7 @@
     "@swc/cli": "~0.1.62",
     "@swc/core": "~1.3.85",
     "@swc/helpers": "~0.5.2",
+    "@tamagui/core": "1.79.2",
     "@testing-library/jest-native": "~5.4.3",
     "@testing-library/react": "14.0.0",
     "@testing-library/react-native": "~12.3.0",
@@ -42,12 +58,15 @@
     "@vitejs/plugin-react-swc": "~3.3.2",
     "@vitest/ui": "~0.34.6",
     "babel-plugin-styled-components": "1.10.7",
+    "cz-git": "^1.8.0",
+    "czg": "^1.8.0",
     "eslint": "~8.46.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^8.0.3",
     "jest-react-native": "18.0.0",
     "jsdom": "~22.1.0",
     "metro": "0.76.8",
@@ -64,21 +83,5 @@
     "vite": "~4.3.9",
     "vite-plugin-dts": "~2.3.0",
     "vitest": "~0.34.6"
-  },
-  "packageManager": "yarn@4.0.2",
-  "engines": {
-    "node": ">= 18.0.0"
-  },
-  "keywords": [
-    "every layout",
-    "fluid design",
-    "responsive",
-    "react",
-    "react native",
-    "tamagui",
-    "expo",
-    "ui",
-    "rescript",
-    "typescript"
-  ]
+  }
 }

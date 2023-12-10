@@ -21,15 +21,35 @@
         "{workspaceRoot}/eslint.config.js"
       ]
     },
-    "e2e": {
-      "cache": true
+    "publish": {
+      "executor": "@nx/js:release-publish"
+    }
+  },
+  "release": {
+    "releaseTagPattern": "{version}",
+    "changelog": {
+      "interactive": true,
+      "git": {
+        "commit": true,
+        "tag": true
+      },
+      "workspaceChangelog": {
+        "createRelease": "github",
+        "file": false
+      }
     },
-    "@nx/vite:test": {
-      "cache": true,
-      "inputs": [
-        "default",
-        "^default"
-      ]
+    "groups": {
+      "npm": {
+        "projects": [
+          "react-tamagui"
+        ],
+        "version": {
+          "generatorOptions": {
+            "currentVersionResolver": "git-tag",
+            "specifierSource": "conventional-commits"
+          }
+        }
+      }
     }
   },
   "pluginsConfig": {
