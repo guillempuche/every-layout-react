@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stack, StackProps, Text } from '@tamagui/core';
-import { toDimensionValue } from './utils';
+// import { toDimensionValue } from './utils';
 
 export type CenterProps = StackProps & {
   maxWidth?: string | number;
@@ -25,9 +25,9 @@ export const Center: React.FC<CenterProps> = ({
 }) => {
   return (
     <Stack
-      maxWidth={toDimensionValue(maxWidth)}
+      maxWidth={maxWidth}
       marginHorizontal="auto"
-      paddingHorizontal={toDimensionValue(gutters)}
+      paddingHorizontal={gutters}
       alignItems={intrinsic ? 'center' : undefined}
       flexDirection={intrinsic ? 'column' : undefined}
       {...props}

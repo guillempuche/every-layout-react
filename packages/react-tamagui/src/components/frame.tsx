@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Image as TamaguiImage } from '@tamagui/core';
+import { Stack } from '@tamagui/core';
 
 export type FrameProps = {
   child: React.ReactNode;
@@ -20,7 +20,8 @@ export const Frame: React.FC<FrameProps> = ({
   const isValidChild = (
     component: React.ReactNode
   ): React.ReactElement | null => {
-    if (React.isValidElement(component) && component.type === TamaguiImage) {
+    // if (React.isValidElement(component) && component.type === TamaguiImage) {
+    if (React.isValidElement(component)) {
       return component;
     }
     return null;

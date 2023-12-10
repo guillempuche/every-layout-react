@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
-import { Stack, Image as TamaguiImage, Text } from '@tamagui/core';
-import { toDimensionValue } from './utils';
+import { Stack, Text } from '@tamagui/core';
+// import { toDimensionValue } from './utils';
 
 export interface IconProps {
   icon: React.ImgHTMLAttributes<HTMLImageElement>;
   text: string;
   space?: number | string;
   label?: string;
-  baseFontSize?: number;
+  // baseFontSize?: number;
 }
 
 /**
@@ -19,7 +19,7 @@ export const Icon: FC<IconProps> = ({
   text,
   space = 0,
   label,
-  baseFontSize = 16,
+  // baseFontSize = 16,
 }) => {
   return (
     <Stack
@@ -29,7 +29,7 @@ export const Icon: FC<IconProps> = ({
       accessible={!!label}
       accessibilityLabel={label}
     >
-      <TamaguiImage
+      {/* <Svg
         source={icon}
         style={{
           marginEnd: toDimensionValue(space),
@@ -37,8 +37,8 @@ export const Icon: FC<IconProps> = ({
           height: baseFontSize,
         }}
         resizeMode="contain"
-      />
-      <Text style={{ marginStart: toDimensionValue(space) }}>{text}</Text>
+      /> */}
+      <Text marginStart={space}>{text}</Text>
     </Stack>
   );
 };
