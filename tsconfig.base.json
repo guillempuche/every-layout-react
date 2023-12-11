@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@every-layout/react-native": ["packages/react-native/src/index.ts"],
       "react-tamagui": ["packages/react-tamagui/src/index.ts"]
     }
   },

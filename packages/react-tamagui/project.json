@@ -5,6 +5,25 @@
   "projectType": "library",
   "tags": [],
   "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps"
+      ],
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/react-tamagui"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
     "res:dev": {
       "executor": "nx:run-commands",
       "options": {
@@ -35,39 +54,6 @@
           "yarn rescript build"
         ],
         "cwd": "packages/react-tamagui"
-      }
-    },
-    "build": {
-      "executor": "@nx/vite:build",
-      "dependsOn": [
-        "ensure-symlink",
-        "sync-deps"
-      ],
-      "outputs": [
-        "{options.outputPath}"
-      ],
-      "defaultConfiguration": "production",
-      "options": {
-        "outputPath": "dist/packages/react-tamagui"
-      },
-      "configurations": {
-        "development": {
-          "mode": "development"
-        },
-        "production": {
-          "mode": "production"
-        }
-      }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
-      "options": {
-        "lintFilePatterns": [
-          "packages/react-tamagui/**/*.{ts,tsx,js,jsx}"
-        ]
       }
     }
   }

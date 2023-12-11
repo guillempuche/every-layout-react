@@ -1,8 +1,6 @@
 import React from 'react';
 import { Stack, StackProps } from '@tamagui/core';
 
-import { toDimensionValue, toNumber } from './utils';
-
 export type BoxProps = StackProps & {
   padding?: string | number;
   borderWidth?: string | number;
@@ -24,8 +22,8 @@ export const Box: React.FC<BoxProps> = ({
 }) => {
   return (
     <Stack
-      padding={toDimensionValue(padding)}
-      borderWidth={toNumber(borderWidth)}
+      padding={padding}
+      borderWidth={borderWidth}
       borderColor="black"
       backgroundColor={invert ? 'var(--color-light)' : 'inherit'}
       {...props}

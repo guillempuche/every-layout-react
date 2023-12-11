@@ -12,6 +12,11 @@
         "^build"
       ]
     },
+    "old-nx-release-publish": {
+      "options": {
+        "packageRoot": "build/packages/{projectName}"
+      }
+    },
     "lint": {
       "cache": true,
       "inputs": [
@@ -27,6 +32,10 @@
   },
   "release": {
     "releaseTagPattern": "{version}",
+    "git": {
+      "commit": true,
+      "tag": true
+    },
     "changelog": {
       "interactive": true,
       "git": {
@@ -36,7 +45,8 @@
       "workspaceChangelog": {
         "createRelease": "github",
         "file": false
-      }
+      },
+      "projectChangelogs": true
     },
     "groups": {
       "npm": {
