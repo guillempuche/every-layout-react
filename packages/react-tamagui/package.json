@@ -1,14 +1,15 @@
 {
-  "name": "react-tamagui",
+  "name": "@every-layout/react-tamagui",
   "version": "0.0.1",
-  "main": "./src/index.js",
-  "types": "./index.d.ts",
+  "main": "./src/index",
+  "types": "./src/index.d.ts",
+  "private": false,
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guillempuche/every-layout-react.git",
+    "url": "https://github.com/guillempuche/every-layout-react.git",
     "directory": "packages/react-tamagui"
   },
   "bugs": {

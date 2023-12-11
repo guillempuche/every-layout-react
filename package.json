@@ -1,6 +1,6 @@
 {
   "name": "every-layout",
-  "version": "0.1.0-beta",
+  "version": "0.1.2-beta",
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -10,6 +10,7 @@
     "build": "nx run-many --target=build",
     "version": "nx release version",
     "release1": "node scripts/release.js",
+    "release-publish": "nx run-many --target=nx-release-publish",
     "release2": "nx release publish",
     "update": "nx migrate latest",
     "update:run-migration": "yarn nx migrate --run-migrations"

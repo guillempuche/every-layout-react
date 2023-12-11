@@ -12,11 +12,6 @@
         "^build"
       ]
     },
-    "old-nx-release-publish": {
-      "options": {
-        "packageRoot": "build/packages/{projectName}"
-      }
-    },
     "lint": {
       "cache": true,
       "inputs": [
@@ -55,8 +50,8 @@
         ],
         "version": {
           "generatorOptions": {
-            "currentVersionResolver": "git-tag",
-            "specifierSource": "conventional-commits"
+            "packageRoot": "dist/packages/{projectName}",
+            "currentVersionResolver": "registry"
           }
         }
       }

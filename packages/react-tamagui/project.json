@@ -24,6 +24,17 @@
         "{options.outputFile}"
       ]
     },
+    "nx-release-publish": {
+      "dependsOn": [
+        "^nx-release-publish",
+        "build"
+      ],
+      "executor": "@nx/js:release-publish",
+      "options": {
+        "registry": "https://www.npmjs.com/package/@every-layout",
+        "packageRoot": "dist/packages/react-tamagui"
+      }
+    },
     "res:dev": {
       "executor": "nx:run-commands",
       "options": {
