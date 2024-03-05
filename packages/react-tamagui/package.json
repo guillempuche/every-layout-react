@@ -1,8 +1,9 @@
 {
   "name": "@every-layout/react-tamagui",
   "version": "0.0.1",
-  "main": "./src/index",
-  "types": "./src/index.d.ts",
+  "main": "dist/packages/react-tamagui/index.js",
+  "module": "dist/packages/react-tamagui/index.mjs",
+  "types": "dist/packages/react-tamagui/index.d.ts",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -23,19 +24,15 @@
     "react native",
     "tamagui",
     "expo",
-    "ui",
-    "rescript",
-    "typescript"
+    "ui"
   ],
   "dependencies": {},
   "devDependencies": {
-    "@rescript/react": "*",
     "@tamagui/core": "*",
-    "tamagui": "*",
-    "rescript": "*"
+    "tamagui": "*"
   },
   "peerDependencies": {
-    "@tamagui/core": ">= 1.75.0",
-    "react-native": ">= 0.68.0"
+    "@tamagui/core": ">= 1.91.0",
+    "react-native": ">= 0.71.0"
   }
 }

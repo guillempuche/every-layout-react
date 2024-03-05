@@ -1,7 +1,7 @@
 import React from 'react';
 export type SidebarProps = {
     children: React.ReactNode;
-    side?: 'left' | 'right';
+    side?: 'start' | 'end';
     sideWidth?: string;
     contentMin?: string;
     space?: string;

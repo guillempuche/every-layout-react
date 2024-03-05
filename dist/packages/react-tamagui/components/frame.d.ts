@@ -1,8 +1,8 @@
 import React from 'react';
 export type FrameProps = {
     child: React.ReactNode;
-    aspectRatio?: number | string;
     fallback: React.ReactNode;
+    aspectRatio?: number | string;
 };
 /**
  * The Frame component is used for augmenting image and video ratios.

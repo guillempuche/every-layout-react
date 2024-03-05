@@ -3,8 +3,8 @@ import { Stack } from '@tamagui/core';
 
 export type FrameProps = {
   child: React.ReactNode;
-  aspectRatio?: number | string;
   fallback: React.ReactNode;
+  aspectRatio?: number | string;
 };
 
 /**
@@ -14,8 +14,8 @@ export type FrameProps = {
  */
 export const Frame: React.FC<FrameProps> = ({
   child,
-  aspectRatio = '16:9',
   fallback,
+  aspectRatio = '16:9',
 }) => {
   const isValidChild = (
     component: React.ReactNode

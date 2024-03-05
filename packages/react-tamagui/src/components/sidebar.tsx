@@ -3,7 +3,7 @@ import { Stack } from '@tamagui/core';
 
 export type SidebarProps = {
   children: React.ReactNode;
-  side?: 'left' | 'right';
+  side?: 'start' | 'end';
   sideWidth?: string;
   contentMin?: string;
   space?: string;
@@ -20,7 +20,7 @@ export type SidebarProps = {
  * More on Every Layout [Sidebar](https://every-layout.dev/layouts/sidebar/).
  */
 export const Sidebar: React.FC<SidebarProps> = ({
-  side = 'left',
+  side = 'start',
   sideWidth,
   contentMin = '50%',
   space = 'var(--s1)',
@@ -28,11 +28,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
   children,
 }) => {
   // Determine the order of elements based on the 'side' prop
-  const isSideLeft = side === 'left';
-  const firstChildStyle = isSideLeft
+  const isSideStart = side === 'start';
+  const firstChildStyle = isSideStart
     ? {}
     : { flexBasis: '0', flexGrow: 999, minWidth: contentMin };
-  const secondChildStyle = isSideLeft
+  const secondChildStyle = isSideStart
     ? { flexBasis: '0', flexGrow: 999, minWidth: contentMin }
     : {};
   // Convert children to an array
