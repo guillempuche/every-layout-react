@@ -8,14 +8,14 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "ESNext",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": ["ESNext", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "react-tamagui": ["packages/react-tamagui/src/index.ts"]
+      "@every-layout/react-tamagui": ["packages/react-tamagui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

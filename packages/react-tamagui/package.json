@@ -1,5 +1,5 @@
 {
-  "name": "@every-layout/react-tamagui",
+  "name": "react-tamagui",
   "version": "0.0.1",
   "main": "dist/packages/react-tamagui/index.js",
   "module": "dist/packages/react-tamagui/index.mjs",

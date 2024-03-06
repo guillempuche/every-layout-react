@@ -1,6 +1,6 @@
 {
-  "name": "react-tamagui",
-  "version": "0.0.1",
+  "name": "@every-layout/react-tamagui",
+  "version": "0.1.4-beta",
   "main": "./src/index.js",
   "types": "./index.d.ts",
   "publishConfig": {
