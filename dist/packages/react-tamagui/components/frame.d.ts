@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 export type FrameProps = {
     child: React.ReactNode;
     fallback: React.ReactNode;

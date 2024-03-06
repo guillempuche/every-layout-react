@@ -1,17 +1,17 @@
-import React from 'react';
-import { Stack } from '@tamagui/core';
+import React from "react";
+import { Stack } from "tamagui";
 
 export type ClusterProps = {
-  children: React.ReactNode;
-  justify?:
-    | 'flex-start'
-    | 'flex-end'
-    | 'center'
-    | 'space-between'
-    | 'space-around'
-    | 'space-evenly';
-  align?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
-  space?: string | number;
+	children: React.ReactNode;
+	justify?:
+		| "flex-start"
+		| "flex-end"
+		| "center"
+		| "space-between"
+		| "space-around"
+		| "space-evenly";
+	align?: "flex-start" | "flex-end" | "center" | "stretch" | "baseline";
+	space?: string | number;
 };
 
 /**
@@ -20,18 +20,18 @@ export type ClusterProps = {
  * More on Every Layout [Cluster](https://every-layout.dev/layouts/cluster/).
  */
 export const Cluster: React.FC<ClusterProps> = ({
-  children,
-  justify = 'flex-start',
-  align = 'flex-start',
-  space, // 'var(--s1)'
+	children,
+	justify = "flex-start",
+	align = "flex-start",
+	space, // 'var(--s1)'
 }) => (
-  <Stack
-    flexDirection="row"
-    flexWrap="wrap"
-    justifyContent={justify}
-    alignItems={align}
-    space={space}
-  >
-    {children}
-  </Stack>
+	<Stack
+		flexDirection="row"
+		flexWrap="wrap"
+		justifyContent={justify}
+		alignItems={align}
+		space={space}
+	>
+		{children}
+	</Stack>
 );

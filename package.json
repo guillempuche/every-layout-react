@@ -1,6 +1,6 @@
 {
   "name": "every-layout",
-  "version": "0.1.4-beta",
+  "version": "0.1.5-beta",
   "license": "MIT",
   "scripts": {
     "commit": "yarn lint && czg",
@@ -22,11 +22,6 @@
   "packageManager": "yarn@4.1.1",
   "engines": {
     "node": ">= 18.0.0"
-  },
-  "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-native": "0.73.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
@@ -81,6 +76,10 @@
     "metro-resolver": "0.76.8",
     "nx": "18.0.7",
     "prettier": "^2.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-native": "^0.73.5",
+    "tamagui": "^1.91.3",
     "tslib": "^2.3.0",
     "typescript": "5.3.3",
     "vite": "5.0.7",

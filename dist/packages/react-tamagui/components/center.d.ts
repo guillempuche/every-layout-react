@@ -1,5 +1,5 @@
-import React from 'react';
-import { StackProps } from '@tamagui/core';
+import React from "react";
+import { StackProps } from "tamagui";
 export type CenterProps = StackProps & {
     maxWidth?: string | number;
     centerText?: boolean;

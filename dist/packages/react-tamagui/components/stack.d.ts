@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 export type StackProps = {
     children: React.ReactNode;
     space?: number | string;

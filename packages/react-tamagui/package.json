@@ -26,13 +26,9 @@
     "expo",
     "ui"
   ],
-  "dependencies": {},
-  "devDependencies": {
-    "@tamagui/core": "*",
-    "tamagui": "*"
-  },
   "peerDependencies": {
-    "@tamagui/core": ">= 1.91.0",
-    "react-native": ">= 0.71.0"
+    "react": ">=18.0.0",
+    "react-native": ">= 0.71.0",
+    "tamagui": ">= 1.91.0"
   }
 }

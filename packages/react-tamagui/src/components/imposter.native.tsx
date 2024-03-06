@@ -1,8 +1,8 @@
-import { Stack } from '@tamagui/core';
-import { Modal, TouchableOpacity } from 'react-native';
-import React from 'react';
+import React from "react";
+import { Modal, TouchableOpacity } from "react-native";
+import { Stack } from "tamagui";
 
-import { ImposterProps } from './imposter_type';
+import { ImposterProps } from "./imposter_type";
 
 // export type ImposterProps = StackProps & {
 //   children: React.ReactNode;
@@ -19,31 +19,31 @@ import { ImposterProps } from './imposter_type';
  * More on Every Layout [Center](https://every-layout.dev/layouts/center/).
  */
 export const Imposter: React.FC<ImposterProps> = ({
-  children,
-  visible,
-  margin = 0,
-  onClose,
-  ...props
+	children,
+	visible,
+	margin = 0,
+	onClose,
+	...props
 }) => {
-  return (
-    <Modal
-      visible={visible}
-      transparent
-      onRequestClose={onClose}
-      animationType="none"
-    >
-      <TouchableOpacity style={{ flex: 1 }} activeOpacity={1} onPress={onClose}>
-        <Stack
-          style={{
-            margin: margin,
-            justifyContent: 'center',
-            alignItems: 'center',
-            flex: 1,
-          }}
-        >
-          {children}
-        </Stack>
-      </TouchableOpacity>
-    </Modal>
-  );
+	return (
+		<Modal
+			visible={visible}
+			transparent
+			onRequestClose={onClose}
+			animationType="none"
+		>
+			<TouchableOpacity style={{ flex: 1 }} activeOpacity={1} onPress={onClose}>
+				<Stack
+					style={{
+						margin: margin,
+						justifyContent: "center",
+						alignItems: "center",
+						flex: 1,
+					}}
+				>
+					{children}
+				</Stack>
+			</TouchableOpacity>
+		</Modal>
+	);
 };

@@ -1,5 +1,5 @@
-import React from 'react';
-import { StackProps } from '@tamagui/core';
+import React from "react";
+import { StackProps } from "tamagui";
 export type BoxProps = StackProps & {
     padding?: string | number;
     borderWidth?: string | number;

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 export interface IconProps {
     icon: React.ImgHTMLAttributes<HTMLImageElement>;
     text: string;

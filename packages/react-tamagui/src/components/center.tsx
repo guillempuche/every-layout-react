@@ -1,12 +1,12 @@
-import React from 'react';
-import { Stack, StackProps, Text } from '@tamagui/core';
+import React from "react";
+import { Stack, StackProps, Text } from "tamagui";
 // import { toDimensionValue } from './utils';
 
 export type CenterProps = StackProps & {
-  maxWidth?: string | number;
-  centerText?: boolean;
-  gutters?: string | number;
-  intrinsic?: boolean;
+	maxWidth?: string | number;
+	centerText?: boolean;
+	gutters?: string | number;
+	intrinsic?: boolean;
 };
 
 /**
@@ -16,23 +16,23 @@ export type CenterProps = StackProps & {
  * More on Every Layout [Center](https://every-layout.dev/layouts/center/).
  */
 export const Center: React.FC<CenterProps> = ({
-  children,
-  maxWidth,
-  centerText = false,
-  gutters,
-  intrinsic = false,
-  ...props
+	children,
+	maxWidth,
+	centerText = false,
+	gutters,
+	intrinsic = false,
+	...props
 }) => {
-  return (
-    <Stack
-      maxWidth={maxWidth}
-      marginHorizontal="auto"
-      paddingHorizontal={gutters}
-      alignItems={intrinsic ? 'center' : undefined}
-      flexDirection={intrinsic ? 'column' : undefined}
-      {...props}
-    >
-      {centerText ? <Text textAlign="center">{children}</Text> : children}
-    </Stack>
-  );
+	return (
+		<Stack
+			maxWidth={maxWidth}
+			marginHorizontal="auto"
+			paddingHorizontal={gutters}
+			alignItems={intrinsic ? "center" : undefined}
+			flexDirection={intrinsic ? "column" : undefined}
+			{...props}
+		>
+			{centerText ? <Text textAlign="center">{children}</Text> : children}
+		</Stack>
+	);
 };

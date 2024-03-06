@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 export type ClusterProps = {
     children: React.ReactNode;
-    justify?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
-    align?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
+    justify?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly";
+    align?: "flex-start" | "flex-end" | "center" | "stretch" | "baseline";
     space?: string | number;
 };
 /**

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 export type ReelProps = {
     children: React.ReactNode;
     itemWidth?: string;

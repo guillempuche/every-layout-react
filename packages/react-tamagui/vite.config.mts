@@ -42,7 +42,7 @@ export default defineConfig({
 		},
 		rollupOptions: {
 			// External packages that should not be bundled into the library.
-			external: ["react", "react-dom"],
+			external: ["react", "react-dom", "react-native-web"],
 		},
 	},
 });
