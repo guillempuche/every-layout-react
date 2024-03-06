@@ -1,6 +1,6 @@
 {
   "name": "every-layout",
-  "version": "0.1.5-beta",
+  "version": "0.1.6-beta",
   "license": "MIT",
   "scripts": {
     "commit": "yarn lint && czg",
