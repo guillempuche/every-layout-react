@@ -1,7 +1,7 @@
 import * as path from "path";
 import { nxViteTsPaths } from "@nx/vite/plugins/nx-tsconfig-paths.plugin";
+import { tamaguiPlugin } from "@tamagui/vite-plugin";
 import react from "@vitejs/plugin-react-swc";
-/// <reference types='vitest' />
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import { viteStaticCopy } from "vite-plugin-static-copy";
@@ -26,6 +26,10 @@ export default defineConfig({
 				},
 			],
 		}),
+		tamaguiPlugin({
+			config: "./src/tamagui.config.ts",
+			components: ["tamagui"],
+		}),
 	],
 
 	// Configuration for building the library.
@@ -37,8 +41,8 @@ export default defineConfig({
 		lib: {
 			entry: "src/index.ts",
 			name: "react",
-			fileName: "index",
-			formats: ["es"],
+			fileName: (format) => `index.${format}.js`,
+			formats: ["es", "cjs"],
 		},
 		rollupOptions: {
 			// External packages that should not be bundled into the library.

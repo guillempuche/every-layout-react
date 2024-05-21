@@ -45,6 +45,7 @@
     "@swc/core": "~1.3.85",
     "@swc/helpers": "~0.5.2",
     "@tamagui/core": "^1.91.1",
+    "@tamagui/vite-plugin": "^1.91.3",
     "@testing-library/jest-native": "~5.4.3",
     "@testing-library/react": "14.0.0",
     "@testing-library/react-native": "12.4.3",
@@ -81,7 +82,7 @@
     "react-native": "^0.73.5",
     "tamagui": "^1.91.3",
     "tslib": "^2.3.0",
-    "typescript": "5.3.3",
+    "typescript": "^5.4.2",
     "vite": "5.0.7",
     "vite-plugin-dts": "~2.3.0",
     "vite-plugin-static-copy": "^1.0.1"

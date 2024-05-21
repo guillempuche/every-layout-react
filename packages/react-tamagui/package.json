@@ -1,9 +1,15 @@
 {
   "name": "react-tamagui",
   "version": "0.0.1",
-  "main": "dist/packages/react-tamagui/index.js",
-  "module": "dist/packages/react-tamagui/index.mjs",
+  "main": "dist/packages/react-tamagui/index.cjs.js",
+  "module": "dist/packages/react-tamagui/index.es.mjs",
   "types": "dist/packages/react-tamagui/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
   "private": false,
   "publishConfig": {
     "access": "public"
